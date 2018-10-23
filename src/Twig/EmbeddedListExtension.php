@@ -22,6 +22,7 @@ class EmbeddedListExtension extends AbstractExtension
     {
         $this->embeddedListHelper = $embeddedListHelper;
     }
+
     public function getFilters()
     {
         return array(
@@ -41,8 +42,8 @@ class EmbeddedListExtension extends AbstractExtension
         return md5($requestUri);
     }
 
-    public function guessDefaultFilters(string $entityFqcn, string $parentEntityProperty, $parentEntity)
+    public function guessDefaultFilters(string $objectFqcn, string $parentDocumentProperty, $parentDocument)
     {
-        return $this->embeddedListHelper->guessDefaultFilter($entityFqcn, $parentEntityProperty, $parentEntity);
+        return $this->embeddedListHelper->guessDefaultFilter($objectFqcn, $parentDocumentProperty, $parentDocument);
     }
 }
