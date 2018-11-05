@@ -35,7 +35,7 @@ class ListFormFiltersTest extends AbstractTestCase
         $this->assertSame(10, $crawler->filter('#main tr[data-id]')->count());
     }
 
-    public function testFormSingleEasyadminAutocomplteFilterIsApplied()
+    public function testFormSingleEasyadminAutocompleteFilterIsApplied()
     {
         $crawler = $this->requestListView('Product', array(), array('category' => array('autocomplete' => 1)));
 
